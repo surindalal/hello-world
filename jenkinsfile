@@ -1,5 +1,7 @@
 pipeline {
-	agent any
+	agent {
+	label javanode
+	}
         stages {
         stage('Checkout') {
             steps {
