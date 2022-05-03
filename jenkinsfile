@@ -1,6 +1,6 @@
 pipeline {
 	agent {
-	label javanode
+	label 'javanode'
 	}
         stages {
         stage('Checkout') {
