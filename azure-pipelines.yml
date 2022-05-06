@@ -22,6 +22,7 @@ steps:
     goals: 'clean package'
 
 - task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.SourcesDirectory) : $(BuildConfiguration)'
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     contents: '**/$(BuildConfiguration)/**/?(*.war|*.jar)'
