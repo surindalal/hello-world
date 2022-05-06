@@ -20,8 +20,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean package'
-- script: echo '$(Build.ArtifactDirectory)'
-#- task: PublishBuildArtifacts@1
- # inputs:
-  #  pathToPublish: '$(Build.ArtifactDirectory)'
-   # artifactName: drop
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(artpathy)'
+    artifactName: drop
