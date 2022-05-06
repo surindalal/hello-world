@@ -23,5 +23,5 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: '$(artpathy)'
+    pathToPublish: '$(artpath)'
     artifactName: drop
