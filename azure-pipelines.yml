@@ -21,6 +21,11 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean package'
 
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents: '**/$(BuildConfiguration)/**/?(*.war|*.jar)'
+    targetFolder: '$(artpath)'
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: '$(artpath)'
